@@ -20,6 +20,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             WheelPickerPracticeTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
+                    // TODO : 年のみを表示するwheel-pickerの実装
                     Greeting(
                         name = "Android",
                         modifier = Modifier.padding(innerPadding)
