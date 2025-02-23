@@ -16,6 +16,8 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        // JitPackリポジトリを追加
+        maven { url = uri("https://www.jitpack.io" ) }
     }
 }
 
