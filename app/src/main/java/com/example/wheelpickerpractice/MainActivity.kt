@@ -73,7 +73,7 @@ fun YearPicker(
     WheelTextPicker(
         texts = years.map { it.toString() },
         startIndex = startIndex,
-        rowCount = 1,
+        rowCount = 3,
         modifier = Modifier.size(200.dp, 200.dp)
     )
 }
