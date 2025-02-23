@@ -50,7 +50,10 @@ fun YearPickerExample() {
         verticalArrangement = Arrangement.Center,
         modifier = Modifier.fillMaxSize()
     ) {
-        Text(text = "選択された年: $selectedYear", style = MaterialTheme.typography.titleMedium)
+        Text(
+            text = "選択された年: $selectedYear",
+            style = MaterialTheme.typography.titleMedium
+        )
         Spacer(modifier = Modifier.height(16.dp))
         YearPicker(
             startYear = selectedYear,
@@ -69,13 +72,13 @@ fun YearPicker(
     maxYear: Int = LocalDate.now().year,
     onYearSelected: (Int) -> Unit
 ) {
-    var selectedYear by remember { mutableStateOf(startYear) }
+    var selectedYear by remember { mutableIntStateOf(startYear) }
 
     WheelDatePicker(
         startDate = LocalDate.of(startYear, 1, 1),
         minDate = LocalDate.of(minYear, 1, 1),
         maxDate = LocalDate.of(maxYear, 12, 31),
-        size = DpSize(100.dp, 150.dp),
+        size = DpSize(200.dp, 200.dp),
         rowCount = 5,
         textStyle = MaterialTheme.typography.bodyLarge,
         selectorProperties = WheelPickerDefaults.selectorProperties(
