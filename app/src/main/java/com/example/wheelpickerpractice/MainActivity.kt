@@ -74,8 +74,10 @@ fun YearPicker(
         texts = years.map { it.toString() },
         startIndex = startIndex,
         rowCount = 3,
-        // 以下のコードは「maxYear」と「onScrollFinished」で遊んでみた例。
-        onScrollFinished = { maxYear },
+        onScrollFinished = { snappedIndex ->
+            onYearSelected(years[snappedIndex])
+            snappedIndex
+        },
         modifier = Modifier.size(200.dp, 200.dp)
     )
 }
